@@ -45,3 +45,19 @@ box-sizing: border-box;
 .translate3:hover{
     transform: translateY(45px);
 }
+
+.center-box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 150px;
+    height: 150px;
+    border: 2px solid hotpink;
+    background-color: indianred;
+    /* 트렌스폼>트렌스레이트 본인기준(정가운데)으로 움직이게 됨 */
+    transform: translate(-50%, -50%);
+}
+
+
+
+
