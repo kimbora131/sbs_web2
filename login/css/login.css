@@ -1,1 +1,162 @@
 *{margin: 0;padding: 0;}
+
+body {
+
+    background: linear-gradient(to right,  #355aff 0%,#6fffb0 100%);
+ 
+}
+
+
+
+/* 로그인 박스 */
+.container {
+    margin: 10% auto;
+    padding: 40px;
+    border-radius: 20px;
+    width: 380px;
+    height: 650px;
+    background: #fff;
+}
+
+
+/* 로고 */
+
+.logo {
+    width: 100%;
+    text-align: center;
+}
+
+.logo > img {
+    width: 370px;
+    padding: 60px 0;
+}
+
+
+/* 정보입력창 */
+
+.id, .pw {
+    padding: 20px;
+    border-bottom: 1px solid rgb(175, 175, 175);
+}
+
+.id > label >input, .pw > label >input {
+    width: 100%;
+}
+
+.input_text {
+    /* color: rgb(175, 175, 175); */
+    font-size: 18px;
+    border: none;
+    line-height: 20px;
+}
+
+.input_text:focus {
+    outline: none;
+}
+
+
+/* 체크박스 */
+
+.check-box {
+    display: inline-block;
+    left: 0;
+    margin: 30px 0;
+}
+
+
+/* 아이디저장/자동로그인 글자에 왼쪽 패딩과 아랫쪽 마진을 줌 */
+.input_check {  
+    display: inline-block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    /* 커서는 체크박스에 마우스가 가면 손가락으로 가리키는 모양으로 바뀜 */
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* 기존의 체크박스를 없앰 */
+.input_check  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* 없앤 체크박스 대신 새로운 박스모양을 만들어줌 */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 22px;
+    width: 22px;
+    background-color: #eee;
+  }
+
+  .input_check:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  .input_check input:checked ~ .checkmark {
+    background-color: #2196F3;
+  }
+
+  /* 안에 하얀 체크표시 일단은 안보이게 함 */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+    /* 근데 체크 했을때 보여짐 */
+  .input_check input:checked ~ .checkmark:after {
+    display: block;
+  }
+
+  .input_check .checkmark:after {
+    left: 7px;
+    top: 3px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+    transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+
+/* 하단 버튼 & 카피라이트 */
+
+.login {
+    height: 65px;
+    background-color: royalblue;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #fff;
+    font-size: 25px;
+    line-height: 62px;
+    font-weight: 200;
+}
+.join {
+    height: 65px;
+    background-color: royalblue;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #fff;
+    font-size: 25px;
+    line-height: 62px;
+    font-weight: 200;
+}
+
+.copy {
+    font-size: 12px;
+    height: 60px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
